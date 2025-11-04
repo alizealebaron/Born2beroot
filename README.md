@@ -17,7 +17,7 @@ You will create your first machine in VirtualBox using specific instructions. Th
 
 ## Sommaire du guide
 
-- Installation
+- [Installation](/guide/installation.md)
 - Configuration
 
 ## Inspirations
