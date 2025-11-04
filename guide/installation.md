@@ -1,7 +1,7 @@
 # Installation
 
 Avant de commencer l'installation de votre première machine virtuelle, je vous invite fortement à vous renseigner sur ce qu'est une machine virtuelle. 
-Vous trouverez dans ce guide la façon dont j'ai procédé pour créer ma propre machine et les erreurs que j'ai pu commettre ou rencontré. J'espère que cela vous sera utile.
+Vous trouverez dans ce guide la façon dont j'ai procédé pour créer ma propre machine et les erreurs que j'ai pu commettre ou rencontrer. J'espère que cela vous sera utile.
 
 ## Récupération de debian
 
