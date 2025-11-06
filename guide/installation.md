@@ -45,5 +45,22 @@ L'installation commençera par vous demander la façon dont vous souhaitez l'ins
 <p align="center">
   <img width="600" height="400" src="/image/installation_03.png">
 </p>
+4. Pour le nom de domaine, inutile d'en ajouter un, vous pouvez passer cette étape.
+5. Choississez un mot de passe fort (selon les critères donnés dans le sujet).
+6. Pour le nom d'utilisateur, mettez votre login. (Pour moi : `alebaron`).
+7. Choississez de nouveau un mot de passe, il ne doit pas contenir votre login !
+
+## Partionner les disques
+
+Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas concernant les bonus), nous allons opter pour une installation **manuelle**.
+
+Avant de passer à l'explication de comment faire, voici un petit cours sur ce qu'est une partition : 
+
+1. 
 
 
+## Sources :
+
+- debian.org : https://www.debian.org/releases/stable/armhf/apcs04.fr.html [Consulté le 06/11/2025]
+- Github de yatsuZ : https://github.com/yatsuZ/B2BR/blob/main/Guide/Installation.md [Consulté le 06/11/2025]
+- Github de mcombeau : https://github.com/mcombeau/Born2beroot/blob/main/guide/installation_debian.md [Consulté le 06/11/2025]
