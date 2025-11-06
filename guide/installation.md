@@ -115,6 +115,19 @@ Créer tous les volumes dont vous avez besoin :
 
 Vous pouvez revérifier les informations dans le menu `LVM configuration` en caas d'erreur, vous pouvez toujours les supprimer et réitéré le processus.
 
+Vous n'aurez qu'à définir les systèmes de fichiers et les points de montage pour chacun des volumes logique.
+
+Par exemple pour **HOME** : `Sélectionner la ligne en dessous` → `Use as` → `Ext 4 journaling file system` → `Mount Point` → `/home` → `Done`.
+
+Pour **Swap**, la procédure sera légèrement différente : `Sélectionner la ligne en dessous` → `Use as` → `swap area` → `Done`.
+
+Et pour **var-log** : `Sélectionner la ligne en dessous` → `Use as` → `Ext 4 journaling file system` → `Mount Point` → `Enter manually` → `/var/log` → `Done`.
+
+<p align="center">
+  <img width="600" height="400" src="/image/installation_08.png">
+</p>
+
+Plus qu'à relire, finir et confirmer !
 
 
 ## Sources :
@@ -123,4 +136,5 @@ Vous pouvez revérifier les informations dans le menu `LVM configuration` en caa
 - [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Installation.md) [Consulté le 06/11/2025]
 - [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/installation_debian.md) [Consulté le 06/11/2025]
 - [Data-labcenter](https://www.data-labcenter.fr/) [Consulté le 06/11/2025]
-- [doc.ubuntu.org](https://doc.ubuntu-fr.org/lvm) [Consulté le 06/11/2025]
+- [doc.ubuntu.org/lvm](https://doc.ubuntu-fr.org/lvm) [Consulté le 06/11/2025]
+- [Wikipedia.org/ext4](https://fr.wikipedia.org/wiki/Ext4) [Consulté le 06/11/2025]
