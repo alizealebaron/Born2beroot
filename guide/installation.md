@@ -19,7 +19,7 @@ La première étape pour créer votre machine virutelle sera de trouver le bon d
 
 Vous pouvez récupérer la dernière version stable de debian en allant sur leur [site internet](https://www.debian.org/index.fr.html). (Ne faites pas comme moi à aller chercher l'image dans des recoins de debian.org alors que la réponse est simple).
 
-## Création de la VirtualBox
+## Création de la Machine Virtuelle
 Une fois l'image récupérée, vous n'avez qu'à lancer VirtualBox.
 
 1. Pour commencer l'installation cliquez sur la bouton `new`.
@@ -33,5 +33,17 @@ Une fois l'image récupérée, vous n'avez qu'à lancer VirtualBox.
 4. Créez un disque dur virtuel (Vous pouvez allouer entre 10GB et 15GB, cela devrait être large pour le sujet et les bonus).
 5. Vous venez de créer votre première machine virtuelle, reste encore à la paramétrer !
 
+## Installation de Debian
+
+L'installation commençera par vous demander la façon dont vous souhaitez l'installer. Étant donné que nous souhaitons installer un serveur, un interface graphique n'est pas nécessaire.
+
+1. Choississez le langage d'installation.
+> [!NOTE]  
+> Par défaut, je dirais d'utiliser l'anglais, notamment car beaucoup de ressources que vous trouverez pendant vos recherches seront en anglais.
+2. Choississez le pays et la disposition de clavier qui vous conviennent.
+3. Pour ce qui est de l'hostname il vous faudra mettre `login42` (conformément à ce qui est demandé).
+<p align="center">
+  <img width="600" height="400" src="/image/installation_03.png">
+</p>
 
 
