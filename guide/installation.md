@@ -54,13 +54,30 @@ L'installation commençera par vous demander la façon dont vous souhaitez l'ins
 
 Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas concernant les bonus), nous allons opter pour une installation **manuelle**.
 
-Avant de passer à l'explication de comment faire, voici un petit cours sur ce qu'est une partition : 
+> [!NOTE]  
+> Partionner un disque dur consiste à diviser celui-ci en différentes parties distinctes (partitions). L'espace de stockage disponible est alors divisé entre les différentes partitions. Les informations sur les partitions sont stockées dans la table des partitions.
 
-1. 
+1. Sélectionnez le disque dur `SCSI (0,0,0) (sda) ...` (Il s'agit de notre seul disque dur dont la taille a été définie un peu plus tôt).
 
+> [!NOTE]  
+> L'objectif suivant est de pouvoir créer deux partitions, dont une [cryptée](https://fr.wikipedia.org/wiki/Chiffrement_de_disque). La première partition nous servira pour démarrer notre machine, elle ne sera donc pas cryptée. La deuxième comportera divers autres éléments et se devra d'être cryptée quand à elle.
+
+2. Pour créer la première partition cliquez sur : `pri/log xxGB FREE SPACE` -> `Create a new partition` -> `500 MB` -> `Primary` -> `Beginning` -> `Mount point` -> `/boot` -> `Done`.
+
+<p align="center">
+  <img width="600" height="400" src="/image/installation_04.png">
+</p>
+
+3. Pour la deuxième partition, cliquez sur : `pri/log xxGB FREE SPACE` -> `Create a new partition` -> `max` -> `Logical` -> `Mount point` -> `Do not mount it` -> `Done`.
+
+<p align="center">
+  <img width="600" height="400" src="/image/installation_05.png">
+</p>
 
 ## Sources :
 
-- debian.org : https://www.debian.org/releases/stable/armhf/apcs04.fr.html [Consulté le 06/11/2025]
-- Github de yatsuZ : https://github.com/yatsuZ/B2BR/blob/main/Guide/Installation.md [Consulté le 06/11/2025]
-- Github de mcombeau : https://github.com/mcombeau/Born2beroot/blob/main/guide/installation_debian.md [Consulté le 06/11/2025]
+- [debian.org](https://www.debian.org/releases/stable/armhf/apcs04.fr.html) [Consulté le 06/11/2025]
+- [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Installation.md) [Consulté le 06/11/2025]
+- [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/installation_debian.md) [Consulté le 06/11/2025]
+- [Data-labcenter](https://www.data-labcenter.fr/) [Consulté le 06/11/2025]
+- 
