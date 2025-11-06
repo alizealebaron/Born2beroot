@@ -38,8 +38,8 @@ Une fois l'image récupérée, vous n'avez qu'à lancer VirtualBox.
 L'installation commençera par vous demander la façon dont vous souhaitez l'installer. Étant donné que nous souhaitons installer un serveur, un interface graphique n'est pas nécessaire.
 
 1. Choississez le langage d'installation.
-> [!NOTE]  
-> Par défaut, je dirais d'utiliser l'anglais, notamment car beaucoup de ressources que vous trouverez pendant vos recherches seront en anglais.
+> [!TIP]  
+> Par défaut, je dirais d'utiliser l'anglais, notamment car beaucoup de ressources que vous trouverez pendant vos recherches seront en anglais. Mais rien ne vous empêche de choisir une autre langue !
 2. Choississez le pays et la disposition de clavier qui vous conviennent.
 3. Pour ce qui est de l'hostname il vous faudra mettre `login42` (conformément à ce qui est demandé).
 <p align="center">
@@ -73,6 +73,21 @@ Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas co
 <p align="center">
   <img width="600" height="400" src="/image/installation_05.png">
 </p>
+
+## Crypter les données d'une partition
+
+Dans cette partie nous allons nous occuper d'encrypter uniquement la partition qui nous intéresse (la deuxième).
+
+1. `Configure encrypted volumes` -> `Yes`
+2. `Create encrypted volumes`
+3. Sélectionner **uniquement** la partition `sda5`
+
+> [!WARNING]  
+> Si par hasard vous veniez à encrypté la première partition, votre machine ne sera plus en mesure de pouvoir [boot (démarrer)](https://fr.wikipedia.org/wiki/D%C3%A9marrage_d%27un_ordinateur). Et je pense que le mieux serait de refaire toute la manipulation depuis le début.
+
+4. Terminez la manipulation en cliquant sur `Done` -> `Finish` -> `Yes`
+5. Après un (long) temps d'attente, choississez un mot de passe (selon les critères du sujet) et notez celui-ci quelque part.
+
 
 ## Sources :
 
