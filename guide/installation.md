@@ -62,13 +62,13 @@ Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas co
 > [!NOTE]  
 > L'objectif suivant est de pouvoir créer deux partitions, dont une [cryptée](https://fr.wikipedia.org/wiki/Chiffrement_de_disque). La première partition nous servira pour démarrer notre machine, elle ne sera donc pas cryptée. La deuxième comportera divers autres éléments et se devra d'être cryptée quand à elle.
 
-2. Pour créer la première partition cliquez sur : `pri/log xxGB FREE SPACE` -> `Create a new partition` -> `500 MB` -> `Primary` -> `Beginning` -> `Mount point` -> `/boot` -> `Done`.
+2. Pour créer la première partition cliquez sur : `pri/log xxGB FREE SPACE` → `Create a new partition` → `500 MB` → `Primary` → `Beginning` → `Mount point` → `/boot` → `Done`.
 
 <p align="center">
   <img width="600" height="400" src="/image/installation_04.png">
 </p>
 
-3. Pour la deuxième partition, cliquez sur : `pri/log xxGB FREE SPACE` -> `Create a new partition` -> `max` -> `Logical` -> `Mount point` -> `Do not mount it` -> `Done`.
+3. Pour la deuxième partition, cliquez sur : `pri/log xxGB FREE SPACE` → `Create a new partition` → `max` → `Logical` → `Mount point` → `Do not mount it` → `Done`.
 
 <p align="center">
   <img width="600" height="400" src="/image/installation_05.png">
@@ -78,14 +78,14 @@ Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas co
 
 Dans cette partie nous allons nous occuper d'encrypter uniquement la partition qui nous intéresse (la deuxième).
 
-1. `Configure encrypted volumes` -> `Yes`
+1. `Configure encrypted volumes` → `Yes`
 2. `Create encrypted volumes`
 3. Sélectionner **uniquement** la partition `sda5`
 
 > [!WARNING]  
 > Si par hasard vous veniez à encrypté la première partition, votre machine ne sera plus en mesure de pouvoir [boot (démarrer)](https://fr.wikipedia.org/wiki/D%C3%A9marrage_d%27un_ordinateur). Et je pense que le mieux serait de refaire toute la manipulation depuis le début.
 
-4. Terminez la manipulation en cliquant sur `Done` -> `Finish` -> `Yes`
+4. Terminez la manipulation en cliquant sur `Done` → `Finish` → `Yes`
 5. Après un (long) temps d'attente, choississez un mot de passe (selon les critères du sujet) et notez celui-ci quelque part.
 
 
