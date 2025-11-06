@@ -50,7 +50,10 @@ L'installation commençera par vous demander la façon dont vous souhaitez l'ins
 6. Pour le nom d'utilisateur, mettez votre login. (Pour moi : `alebaron`).
 7. Choississez de nouveau un mot de passe, il ne doit pas contenir votre login !
 
-## Partionner les disques
+## Partionner les disques (Bonus)
+
+> [!TIP]  
+> Cette partie-là est demandée pour les bonus. Si vous hésitez encore à les faire je recommande tout de même de la réaliser. Sinon, si vous changez d'avis en cours de route, vous risquez de devoir tout refaire pour avoir les bonnes partitions. 
 
 Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas concernant les bonus), nous allons opter pour une installation **manuelle**.
 
@@ -74,7 +77,7 @@ Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas co
   <img width="600" height="400" src="/image/installation_05.png">
 </p>
 
-## Crypter les données d'une partition
+## Crypter les données d'une partition (Bonus)
 
 Dans cette partie nous allons nous occuper d'encrypter uniquement la partition qui nous intéresse (la deuxième).
 
@@ -83,10 +86,35 @@ Dans cette partie nous allons nous occuper d'encrypter uniquement la partition q
 3. Sélectionner **uniquement** la partition `sda5`
 
 > [!WARNING]  
-> Si par hasard vous veniez à encrypté la première partition, votre machine ne sera plus en mesure de pouvoir [boot (démarrer)](https://fr.wikipedia.org/wiki/D%C3%A9marrage_d%27un_ordinateur). Et je pense que le mieux serait de refaire toute la manipulation depuis le début.
+> Si par hasard vous veniez à encrypter la première partition, votre machine ne sera plus en mesure de pouvoir [boot (démarrer)](https://fr.wikipedia.org/wiki/D%C3%A9marrage_d%27un_ordinateur). Et je pense que le mieux serait de refaire toute la manipulation depuis le début.
 
 4. Terminez la manipulation en cliquant sur `Done` → `Finish` → `Yes`
 5. Après un (long) temps d'attente, choississez un mot de passe (selon les critères du sujet) et notez celui-ci quelque part.
+
+## Configurer le gestionnaire de volumes logiques (Bonus)
+
+> [!NOTE]  
+> Si vous ne savez pas ce qu'est un LVM (Logical Volume Manager), je vous invite à consulter le site suivant : [doc.ubuntu.org](https://doc.ubuntu-fr.org/lvm).
+
+1. `Configure the Logical Volume Manager` → `Yes`
+2. `Create a Volume Group` → `LVMGroup` (Voir sujet) → `/dev/mapper/sda5_crypt`
+
+<p align="center">
+  <img width="600" height="400" src="/image/installation_06.png">
+</p>
+
+Créer tous les volumes dont vous avez besoin :
+
+`Create Logical Volume` → `LVMGroup` → `{nom}` → `{Taille}`
+
+(Adaptez la taille des volumes selon vos besoins).
+
+<p align="center">
+  <img width="600" height="400" src="/image/installation_07.png">
+</p>
+
+Vous pouvez revérifier les informations dans le menu `LVM configuration` en caas d'erreur, vous pouvez toujours les supprimer et réitéré le processus.
+
 
 
 ## Sources :
@@ -95,4 +123,4 @@ Dans cette partie nous allons nous occuper d'encrypter uniquement la partition q
 - [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Installation.md) [Consulté le 06/11/2025]
 - [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/installation_debian.md) [Consulté le 06/11/2025]
 - [Data-labcenter](https://www.data-labcenter.fr/) [Consulté le 06/11/2025]
-- 
+- [doc.ubuntu.org](https://doc.ubuntu-fr.org/lvm) [Consulté le 06/11/2025]
