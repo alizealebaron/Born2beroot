@@ -129,6 +129,15 @@ Et pour **var-log** : `Sélectionner la ligne en dessous` → `Use as` → `Ext 
 
 Plus qu'à relire, finir et confirmer !
 
+## Finaliser l'installation
+
+1. Vous pouvez refuser le scan.
+2. Choississez le `pays` et le `miroir`.
+3. Laissez vide le champ de `proxy`.
+4. Cliquez sur `non`.
+5. Décochez toutes les cases.
+6. Installez grub dans le dossier `/dev/sda`.
+7. Appuyez sur continuer et, félicitations, vous avez terminé l'installation de votre système debian !
 
 ## Sources :
 
