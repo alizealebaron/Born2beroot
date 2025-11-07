@@ -23,11 +23,25 @@ Que nous allons pouvoir compléter par la commande pour installer sudo :
 apt install sudo
 ```
 
+Ensuite, il faut ajouter notre utilisateur au groupe sudo, cela lui permettra d'utiliser les commandes en tant que super utilisateur. Pour cela on utilise la commande suivante (-aG pour add Group) :
+```
+sudo usermod -aG sudo <login>
+```
+
+Pour vérifier que l'utilisateur appartient au bon groupe, vous pouvez faire la commande suivante : 
+```
+groups <login>
+```
+
+<p align="center">
+  <img width="600" height="400" src="/image/configuration_00.png">
+</p>
+
 
 
 
 ## Sources
 
-- [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Installation.md) [Consulté le 06/11/2025]
-- [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/installation_debian.md) [Consulté le 06/11/2025]
+- [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Configuration.md) [Consulté le 06/11/2025]
+- [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/configuration_debian.md) [Consulté le 06/11/2025]
 - [Wikipedia.org/sudo](https://fr.wikipedia.org/wiki/Sudo) [Consulté le 07/11/2025]
