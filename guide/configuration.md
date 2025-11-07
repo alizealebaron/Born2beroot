@@ -160,7 +160,34 @@ Une fois les modifications effectuées, vous n'aurez plus qu'à tenter de vous c
 ssh <login>@localhost -p 4243
 ```
 
-Si vous arrivez à vous connecter, bien joué ! Sinon, en cas d'erreurs, revérifiez peut-être les configurations `ufw`, `ssh` ou les `paramètres de VirtualBox`.
+Si vous arrivez à vous connecter, bien joué ! Vous pouvez vous connecter en utilisant `exit`. Sinon, en cas d'erreurs, revérifiez peut-être les configurations `ufw`, `ssh` ou les `paramètres de VirtualBox`.
+
+## Changer la politique de mot de passe
+
+Maintenant, nous allons modifier la façon dont sont gérer les mots de passe. Certains paramètres peuvent dores et déjà être gérer avec debian mais nous aurons besoin d'installer un autre paquet pour correspondre à toutes les exigeances du sujet.
+
+Commençons par les modifications qu'il est possible de faire dores et déjà.
+
+```bash
+sudo nano /etc/login.defs # Ouvre le fichier de controle de mot de passe
+```
+
+Trouvez et modifiez les lignes suivantes afin qu'elles correspondent au sujet. Dans mon cas :
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_07.png">
+</p>
+
+La politique de mot de passe a changé pour tout nouvel utilisateur, mais elle n'est pas encore appliquée pour root et pour votre login (qui sont des compte antérieur à la modification).
+
+Pour changer cela, on peut utiliser la commande `chage`, si vous ne savez pas comment elle fonctionne, je vous invite à lire ce [guide](https://www.it-connect.fr/linux-forcer-le-changement-de-mot-de-passe-des-comptes/).
+
+```bash
+sudo chage -M 30 <login/root>
+sudo chage -m  2 <login/root>
+sudo chage -W  7 <login/root>
+```
+
 
 ## Sources
 
@@ -173,3 +200,4 @@ Si vous arrivez à vous connecter, bien joué ! Sinon, en cas d'erreurs, revéri
 - [it-connect.fr/UFW](https://www.it-connect.fr/configurer-un-pare-feu-local-sous-debian-11-avec-ufw/) [Consulté le 07/11/2025]
 - [cloudflare.com/what-is-ssh](https://www.cloudflare.com/fr-fr/learning/access-management/what-is-ssh/) [Consulté le 07/11/2025]
 - [it-connect.fr/ssh](https://www.it-connect.fr/chapitres/installation-dun-serveur-ssh-et-premiere-connexion/) [Consulté le 07/11/2025]
+- [hostinger.com/secure-password-policy](https://www.hostinger.com/tutorials/how-to-change-password-in-linux?utm_campaign=Generic-Tutorials-DSA-t3|NT:Se|Lang:EN|LO:FR&utm_medium=ppc&gad_source=1&gad_campaignid=22523766166&gbraid=0AAAAADMy-hZGSzJRPF2GG55SIMAhMD4Gi&gclid=CjwKCAiAzrbIBhA3EiwAUBaUdRIJBq1cTqKE1XlZUb8cwYWKIS8cxDoUMDKDb2h5jOkHkd-HfrooqhoCqfsQAvD_BwE#Set_up_a_secure_password_policy) [Consulté le 07/11/2025]
