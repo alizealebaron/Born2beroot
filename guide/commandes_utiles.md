@@ -50,4 +50,4 @@ Pour changer l'hostname d'une machine :
 - [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Configuration.md) [Consulté le 06/11/2025]
 - [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/configuration_debian.md) [Consulté le 06/11/2025]
 - [malekal.com/changer-hostname](https://www.malekal.com/comment-changer-le-nom-de-la-machine-hostname-debian-ubuntu/#Comment_changer_le_nom_de_la_machine_hostname_sur_Debian_ou_Ubuntu) [Consulté le 07/11/2025]
-- [malekal.com/groups] (https://www.malekal.com/lister-groupes-linux/) [Consulté le 07/11/2025]
+- [malekal.com/groups](https://www.malekal.com/lister-groupes-linux/) [Consulté le 07/11/2025]

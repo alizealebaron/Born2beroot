@@ -225,8 +225,9 @@ Plus qu'à changer les mots de passe de nos deux utilisateurs `root` et `login`.
 sudo passwd <login/root>
 ```
 
+## Script & Monitoring
 
-
+(To be continued)...
 
 ## Sources
 
