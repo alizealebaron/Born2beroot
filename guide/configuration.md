@@ -139,7 +139,7 @@ Maintenant que nous avons paramétrer notre machine virtuelle pour le ssh, il fa
 Dans VirtualBox cliquez sur `Settings` → `Network` → `Adapter 1` → `Advanced` → `Port Forwarding`
 
 <p align="center">
-  <img width="800" height="400" src="/image/configuration_05.png">
+  <img width="800" height="400" src="/image/configuration_05.gif">
 </p>
 
 
