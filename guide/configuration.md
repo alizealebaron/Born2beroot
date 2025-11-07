@@ -77,7 +77,7 @@ sudo ufw enable
 
 Vous pouvez ensuite vérifier le fonctionnement du service ufw avec la commande `sudo systemctl status ufw`.
 <p align="center">
-  <img width="600" height="400" src="/image/configuration_01.png">
+  <img width="800" height="400" src="/image/configuration_01.png">
 </p>
 
 
