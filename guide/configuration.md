@@ -219,6 +219,12 @@ enforce_for_root
 
 Les commentaires dans le fichiers sont assez parlant pour pouvoir trouver les modifications à faire par soi-même.
 
+Plus qu'à changer les mots de passe de nos deux utilisateurs `root` et `login`.
+
+```bash
+sudo passwd <login/root>
+```
+
 
 
 

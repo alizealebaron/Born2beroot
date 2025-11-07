@@ -20,6 +20,8 @@ You will create your first machine in VirtualBox using specific instructions. Th
 - [Installation](/guide/installation.md)
 - [Configuration](/guide/configuration.md)
 
+- [Listes de commandes linux](/guide/commandes_utiles.md)
+
 ## Inspirations
 
 Je vous invite à lire les guides de [mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/README.md) et de [yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/README.md) qui m'ont inspiré pour écrire le mien. 
