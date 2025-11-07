@@ -178,7 +178,7 @@ Trouvez et modifiez les lignes suivantes afin qu'elles correspondent au sujet. D
   <img width="800" height="400" src="/image/configuration_07.png">
 </p>
 
-La politique de mot de passe a changé pour tout nouvel utilisateur, mais elle n'est pas encore appliquée pour root et pour votre login (qui sont des compte antérieur à la modification).
+La politique de mot de passe a changé pour tout nouvel utilisateur, mais elle n'est pas encore appliquée pour root et pour votre login (qui sont des comptes antérieurs à la modification).
 
 Pour changer cela, on peut utiliser la commande `chage`, si vous ne savez pas comment elle fonctionne, je vous invite à lire ce [guide](https://www.it-connect.fr/linux-forcer-le-changement-de-mot-de-passe-des-comptes/).
 
@@ -187,6 +187,39 @@ sudo chage -M 30 <login/root>
 sudo chage -m  2 <login/root>
 sudo chage -W  7 <login/root>
 ```
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_08.png">
+</p>
+
+Maintenant, nous allons pouvoir installer le paquet qui vérifiera que les utilisateurs ont bien un mot de passe conforme à ce qui est demandé dans le sujet.
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install libpam-pwquality
+```
+
+Et pour pouvoir configurer le tout, on va modifier le dossier suivant : `/etc/security/pwquality.conf`.
+
+Pour ma part, voici à quoi ressemble les changements que j'ai fait :
+```bash
+difok = 7
+minlen = 10
+dcredit = -1
+ucredit = -1
+lcredit = -1
+...
+maxrepeat = 3
+...
+usercheck = 1
+...
+enforce_for_root
+```
+
+Les commentaires dans le fichiers sont assez parlant pour pouvoir trouver les modifications à faire par soi-même.
+
+
 
 
 ## Sources
@@ -201,3 +234,4 @@ sudo chage -W  7 <login/root>
 - [cloudflare.com/what-is-ssh](https://www.cloudflare.com/fr-fr/learning/access-management/what-is-ssh/) [Consulté le 07/11/2025]
 - [it-connect.fr/ssh](https://www.it-connect.fr/chapitres/installation-dun-serveur-ssh-et-premiere-connexion/) [Consulté le 07/11/2025]
 - [hostinger.com/secure-password-policy](https://www.hostinger.com/tutorials/how-to-change-password-in-linux?utm_campaign=Generic-Tutorials-DSA-t3|NT:Se|Lang:EN|LO:FR&utm_medium=ppc&gad_source=1&gad_campaignid=22523766166&gbraid=0AAAAADMy-hZGSzJRPF2GG55SIMAhMD4Gi&gclid=CjwKCAiAzrbIBhA3EiwAUBaUdRIJBq1cTqKE1XlZUb8cwYWKIS8cxDoUMDKDb2h5jOkHkd-HfrooqhoCqfsQAvD_BwE#Set_up_a_secure_password_policy) [Consulté le 07/11/2025]
+- [it-connect.fr/forcer-changement-mdp](https://www.it-connect.fr/linux-forcer-le-changement-de-mot-de-passe-des-comptes/) [Consulté le 07/11/2025]
