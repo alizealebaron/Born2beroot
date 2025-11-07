@@ -37,6 +37,27 @@ groups <login>
   <img width="600" height="400" src="/image/configuration_00.png">
 </p>
 
+Pour modifier le fichier de configuration qui se trouve dans le dossier `/etc/sudoers` nous pouvons directement utiliser la commande suivante :
+
+```
+sudo visudo
+```
+(Ou vous pouvez tout aussi bien vous déplacer dans le dossier et faire un `sudo nano sudoers`).
+
+Pour les modifications, voici celles que j'ai ajoutées dans mon fichier :
+```
+Defaults	passwd_tries=3 # Nombres d'essais pour le mot de passe.
+Defaults	badpass_message="Mauvais mot de passe." # Phrase d'erreur de mot de passe
+Defaults	log_input	# Récupéré les logs des commandes données avec sudo
+Defaults	logfile="/var/log/sudo/sudo.log" # Chemin du fichier de log
+Defaults	log_output # Récupéré les réponses des commandes exécutées avec sudo
+Defaults	iolog_dir="/var/log/sudo" # L'endroit où seront stockés les logs d'output
+Defaults	requiretty # Active le mode tty comme demandé
+```
+
+Pour vérifier que les logs fonctionnent vous pouvez vous rendre dans le dossier `/var/log/sudo/`. Vous trouverez le fichier `sudo.log` qui répertorie toutes les commandes mais aussi un fichier `00/00` dans lequel se trouvera un dossier par commande faites avec sudo. Ce sont les texts d'output que l'on a demandé.
+
+Nous devrions en avoir fini avec la configuration de sudo.
 
 
 
@@ -45,3 +66,6 @@ groups <login>
 - [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Configuration.md) [Consulté le 06/11/2025]
 - [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/configuration_debian.md) [Consulté le 06/11/2025]
 - [Wikipedia.org/sudo](https://fr.wikipedia.org/wiki/Sudo) [Consulté le 07/11/2025]
+- [it-connect.fr](https://www.it-connect.fr/commande-sudo-comment-configurer-sudoers-sous-linux/#B_Editer_la_configuration_de_sudoers_avec_visudo) [Consulté le 07/11/2025]
+- [malekal.com](https://www.malekal.com/quest-ce-que-tty-comment-utiliser-commande-tty-sur-linux/) [Consulté le 07/11/2025]
+- [tverma.hashnode.dev](https://tverma.hashnode.dev/custom-sudo-logs-file-linux) [Consulté le 07/11/2025]
