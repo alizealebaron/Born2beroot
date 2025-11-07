@@ -13,6 +13,15 @@ Ces commandes seront toujours à utiliser avant n'importe quel installation, il 
 
 Pour répondre aux attentes du sujet, il va nous falloir installer plusieurs outils sur notre machine. C'est le cas de sudo, une commande qui peut être utilisée afin de lancer une commande en tant que [super utilisateur](https://fr.wikipedia.org/wiki/Utilisateur_root). 
 
+Aussi, nous allons pouvoir utiliser les sacro saintes commandes : 
+```
+apt update
+apt upgrade
+```
+Que nous allons pouvoir compléter par la commande pour installer sudo :
+```
+apt install sudo
+```
 
 
 
