@@ -2,7 +2,7 @@
 
 Afin d'installer de nouveau paquet sur votre système, il est important de vérifier que celui-ci est toujours à jour avant tout installation. C'est à cela que vont servir les commandes :
 
-```
+```bash
 apt update
 apt upgrade
 ```
@@ -14,22 +14,22 @@ Ces commandes seront toujours à utiliser avant n'importe quel installation, il 
 Pour répondre aux attentes du sujet, il va nous falloir installer plusieurs outils sur notre machine. C'est le cas de sudo, une commande qui peut être utilisée afin de lancer une commande en tant que [super utilisateur](https://fr.wikipedia.org/wiki/Utilisateur_root). 
 
 Aussi, nous allons pouvoir utiliser les sacro saintes commandes : 
-```
+```bash
 apt update
 apt upgrade
 ```
 Que nous allons pouvoir compléter par la commande pour installer sudo :
-```
+```bash
 apt install sudo
 ```
 
 Ensuite, il faut ajouter notre utilisateur au groupe sudo, cela lui permettra d'utiliser les commandes en tant que super utilisateur. Pour cela on utilise la commande suivante (-aG pour add Group) :
-```
+```bash
 sudo usermod -aG sudo <login>
 ```
 
 Pour vérifier que l'utilisateur appartient au bon groupe, vous pouvez faire la commande suivante : 
-```
+```bash
 groups <login>
 ```
 
@@ -39,13 +39,13 @@ groups <login>
 
 Pour modifier le fichier de configuration qui se trouve dans le dossier `/etc/sudoers` nous pouvons directement utiliser la commande suivante :
 
-```
+```bash
 sudo visudo
 ```
 (Ou vous pouvez tout aussi bien vous déplacer dans le dossier et faire un `sudo nano sudoers`).
 
 Pour les modifications, voici celles que j'ai ajoutées dans mon fichier :
-```
+```bash
 Defaults	passwd_tries=3 # Nombres d'essais pour le mot de passe.
 Defaults	badpass_message="Mauvais mot de passe." # Phrase d'erreur de mot de passe
 Defaults	log_input	# Récupéré les logs des commandes données avec sudo
