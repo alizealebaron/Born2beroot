@@ -142,7 +142,25 @@ Dans VirtualBox cliquez sur `Settings` → `Network` → `Adapter 1` → `Advanc
   <img width="800" height="400" src="/image/configuration_05.gif">
 </p>
 
+> [!NOTE]  
+> Le port 4242 est parfois déjà utilisé (surtout à 42). Pour éviter les erreurs ssh et pour pouvoir rendre un projet fonctionnel, j'ai personnellement fait le choix d'utiliser le port 4243 pour l'host.
 
+Vous n'avez plus qu'à ajouter une nouvelle règle pour le port 4242 (ou 4243 dans mon cas) Host et 4242 guest !
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_06.gif">
+</p>
+
+> [!WARNING]  
+> Pensez à bien redémarrer le service ssh après la modification avec la commande `sudo systemctl restart ssh`.
+
+Une fois les modifications effectuées, vous n'aurez plus qu'à tenter de vous connecter à la machine virtuelle depuis le terminal de votre ordinateur avec la commande suivante :
+
+```bash
+ssh <login>@localhost -p 4243
+```
+
+Si vous arrivez à vous connecter, bien joué ! Sinon, en cas d'erreurs, revérifiez peut-être les configurations `ufw`, `ssh` ou les `paramètres de VirtualBox`.
 
 ## Sources
 
