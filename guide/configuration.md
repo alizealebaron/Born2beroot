@@ -128,6 +128,20 @@ Il ne vous reste plus qu'à trouver la ligne commentée `#Port 22` et la replace
 > [!WARNING]  
 > N'oubliez pas de redémarrer le service ssh avec la commande `sudo systemctl restart ssh` ou les changements ne seront pas actualisés.
 
+Une fois SSH redémarré, vous pouvez utiliser la commande `sudo systemctl status ssh` pour vérifier que le port d'écoute à bien changé.
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_04.png">
+</p>
+
+Maintenant que nous avons paramétrer notre machine virtuelle pour le ssh, il faut paramétrer VirtualBox afin que nous puissions y avoir accès depuis le terminal de notre ordinateur. 
+
+Dans VirtualBox cliquez sur `Settings` → `Network` → `Adapter 1` → `Advanced` → `Port Forwarding`
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_05.png">
+</p>
+
 
 
 ## Sources
