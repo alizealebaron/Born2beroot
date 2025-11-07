@@ -65,9 +65,9 @@ Avant de commencer à installer UFW sur notre machine, petit point sur ce que pa
 
 Commençons par les commandes de bases :
 ```bash
-apt update
-apt upgrade
-apt install ufw
+sudo apt update
+sudo apt upgrade
+sudo apt install ufw
 ```
 
 Ensuite, il va nous falloir activer le service à l'aide de la commande :
@@ -99,7 +99,23 @@ Pour ma part, cela me renvoit ce résultat à la fin de cette étape :
   <img width="800" height="400" src="/image/configuration_02.png">
 </p>
 
+## Configuration du service SSH
 
+Comme toujours, avant de commencer à installer, un petit point sur ce qu'est le protocole SSH. Le protocole SSH (Secure SHell) une méthode pour envoyer des commandes à un ordinateur en toute sécurité. Ce protocole est aussi souvent utiliser pour contrôler des serveurs à distances , permettant de gérer les infrastrucutures et de transféré plus facilement des fichiers.
+Si vous voulez en savoir un peu plus, je vous invite à consulter ce [lien](https://www.cloudflare.com/fr-fr/learning/access-management/what-is-ssh/) d'où je tire ma définition.
+
+Commençons par le commencement, l'installation (vous devriez commencer à savoir).
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install openssh-server
+```
+
+Comme pour ufw, on peut verifier le status de SSH avec la commande `sudo systemctl status ssh`.
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_03.png">
+</p>
 
 ## Sources
 
@@ -110,3 +126,5 @@ Pour ma part, cela me renvoit ce résultat à la fin de cette étape :
 - [malekal.com](https://www.malekal.com/quest-ce-que-tty-comment-utiliser-commande-tty-sur-linux/) [Consulté le 07/11/2025]
 - [tverma.hashnode.dev](https://tverma.hashnode.dev/custom-sudo-logs-file-linux) [Consulté le 07/11/2025]
 - [it-connect.fr/UFW](https://www.it-connect.fr/configurer-un-pare-feu-local-sous-debian-11-avec-ufw/) [Consulté le 07/11/2025]
+- [cloudflare.com/what-is-ssh](https://www.cloudflare.com/fr-fr/learning/access-management/what-is-ssh/) [Consulté le 07/11/2025]
+- [it-connect.fr/ssh](https://www.it-connect.fr/chapitres/installation-dun-serveur-ssh-et-premiere-connexion/) [Consulté le 07/11/2025]
