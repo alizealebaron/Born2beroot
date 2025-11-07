@@ -59,6 +59,17 @@ Pour vérifier que les logs fonctionnent vous pouvez vous rendre dans le dossier
 
 Nous devrions en avoir fini avec la configuration de sudo.
 
+## Configurer UFW sur notre système
+
+Avant de commencer à installer UFW sur notre machine, petit point sur ce que paquet permet de faire. Déjà, UFW signifie **Uncomplicated Firewall** ou comme j'aime l'appellé maintenant "Pare-feu pas compliqué". Ainsi, UFW est un paquet qui va nous permettre de configurer un [pare-feu](https://fr.wikipedia.org/wiki/Pare-feu_(informatique)) local pour gérer les flux entrants et sortants.
+
+Commençons par les commandes de bases :
+```
+apt update
+apt upgrade
+apt install ufw
+```
+
 
 
 ## Sources
@@ -66,6 +77,7 @@ Nous devrions en avoir fini avec la configuration de sudo.
 - [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Configuration.md) [Consulté le 06/11/2025]
 - [Github de mcombeau](https://github.com/mcombeau/Born2beroot/blob/main/guide/configuration_debian.md) [Consulté le 06/11/2025]
 - [Wikipedia.org/sudo](https://fr.wikipedia.org/wiki/Sudo) [Consulté le 07/11/2025]
-- [it-connect.fr](https://www.it-connect.fr/commande-sudo-comment-configurer-sudoers-sous-linux/#B_Editer_la_configuration_de_sudoers_avec_visudo) [Consulté le 07/11/2025]
+- [it-connect.fr/sudoers](https://www.it-connect.fr/commande-sudo-comment-configurer-sudoers-sous-linux/#B_Editer_la_configuration_de_sudoers_avec_visudo) [Consulté le 07/11/2025]
 - [malekal.com](https://www.malekal.com/quest-ce-que-tty-comment-utiliser-commande-tty-sur-linux/) [Consulté le 07/11/2025]
 - [tverma.hashnode.dev](https://tverma.hashnode.dev/custom-sudo-logs-file-linux) [Consulté le 07/11/2025]
+- [it-connect.fr/UFW](https://www.it-connect.fr/configurer-un-pare-feu-local-sous-debian-11-avec-ufw/) [Consulté le 07/11/2025]
