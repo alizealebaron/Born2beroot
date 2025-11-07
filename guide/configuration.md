@@ -70,6 +70,16 @@ apt upgrade
 apt install ufw
 ```
 
+Ensuite, il va nous falloir activer le service à l'aide de la commande :
+```
+sudo ufw enable
+```
+
+Vous pouvez ensuite vérifier le fonctionnement du service ufw avec la commande `sudo systemctl status ufw`.
+<p align="center">
+  <img width="600" height="400" src="/image/configuration_01.png">
+</p>
+
 
 
 ## Sources
