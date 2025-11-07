@@ -64,20 +64,39 @@ Nous devrions en avoir fini avec la configuration de sudo.
 Avant de commencer à installer UFW sur notre machine, petit point sur ce que paquet permet de faire. Déjà, UFW signifie **Uncomplicated Firewall** ou comme j'aime l'appellé maintenant "Pare-feu pas compliqué". Ainsi, UFW est un paquet qui va nous permettre de configurer un [pare-feu](https://fr.wikipedia.org/wiki/Pare-feu_(informatique)) local pour gérer les flux entrants et sortants.
 
 Commençons par les commandes de bases :
-```
+```bash
 apt update
 apt upgrade
 apt install ufw
 ```
 
 Ensuite, il va nous falloir activer le service à l'aide de la commande :
-```
+```bash
 sudo ufw enable
 ```
 
 Vous pouvez ensuite vérifier le fonctionnement du service ufw avec la commande `sudo systemctl status ufw`.
+
 <p align="center">
   <img width="800" height="400" src="/image/configuration_01.png">
+</p>
+
+Pour activer un [port](https://fr.wikipedia.org/wiki/Port_(logiciel)) vous n'aurez plus qu'à utiliser la commande suivante :
+```bash
+sudo ufw allow <n°port>
+```
+
+Et pour le désactiver ensuite, vous pouvez toujours utiliser la commande `sudo ufw deny <n°port>`.
+
+Pour vérifier que vous avez activer les ports nécessaire, vous pouvez utiliser la commande :
+```bash
+sudo ufw status
+```
+
+Pour ma part, cela me renvoit ce résultat à la fin de cette étape :
+
+<p align="center">
+  <img width="800" height="400" src="/image/configuration_02.png">
 </p>
 
 
