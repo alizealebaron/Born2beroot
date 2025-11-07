@@ -117,6 +117,19 @@ Comme pour ufw, on peut verifier le status de SSH avec la commande `sudo systemc
   <img width="800" height="400" src="/image/configuration_03.png">
 </p>
 
+Ensuite, nous allons voir pour changer le port d'écoute du protocole SSH. Par défaut, le port ssh est en écoute sur le port 22. Nous allons pouvoir changer cela en modifiant le fichier de configuration dans `/etc/ssh/sshd_config`.
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+Il ne vous reste plus qu'à trouver la ligne commentée `#Port 22` et la replacer par `Port 4242`.
+
+> [!WARNING]  
+> N'oubliez pas de redémarrer le service ssh avec la commande `sudo systemctl restart ssh` ou les changements ne seront pas actualisés.
+
+
+
 ## Sources
 
 - [Github de yatsuZ](https://github.com/yatsuZ/B2BR/blob/main/Guide/Configuration.md) [Consulté le 06/11/2025]
