@@ -5,9 +5,9 @@ ARCH=$(uname -a)
 PCPU=$(lscpu | grep "^CPU(s):" | grep -o '[0-9]\+')
 VCPU=$(cat /proc/cpuinfo | grep processor | wc -l)
 
-RAM_USED=$(free -h | grep "Mem" | tr -s ' ' | cut -d ' ' -f 3)
-RAM_TOTAL=$(free -h | grep "Mem" | tr -s ' ' | cut -d ' ' -f 2)
-RAM_PERC=$(( 100 * RAM_USED / RAM_TOTAL ))
+RAM_USED=$(free -h | awk '/Mem:/ {print $3}')
+RAM_TOTAL=$(free -h | awk '/Mem:/ {print $2}')
+RAM_PERC=$(free -k | awk '/Mem:/ {print $.2f}, $3 / $2 * 100')
 
 DISK_USED=$(df -h --total | grep "total" | tr -s ' ' | cut -d ' ' -f 3)
 DISK_TOTAL=$(df -h --total | grep "total" | tr -s ' ' | cut -d ' ' -f 2)
@@ -21,27 +21,23 @@ USER_LOG=$(who | wc -l)
 IP_ADDR=$(hostname -I)
 MAC_ADDR=$(ip addr | grep link/ether | cut -d ' ' -f 3)
 
-SUDO_LOG=$(grep COMMAND /var/log/sudo/sudo.log | wc -l)
+SUDO_LOG=$(grep -a COMMAND /var/log/sudo/sudo.log | wc -l)
 
-if lsblk | grep "lvm"; then
-    LVM_STATUS="Yep"
-else
-    LVM_STATUS="Nop"
-fi
+LVM_STATUS=$(if [ $(lsblk | grep lvm | wc -l) -eq 0 ]; then echo Nop; else echo Yep; fi)
 
 # Commandes d'envoi sur tous les terminaux de tous les utilisateurs
-wall "
-       ------------------------------------------------
-       Architecture    : $ARCH
-       Physical CPUs   : $PCPU
-       Virtual CPUs    : $VCPU
-       Memory Usage    : $RAM_USED/$RAM_TOTAL ($RAM_PERC %)
-       Disk Usage      : $DISK_USED/$DISK_TOTAL ($DISK_PERC)
-       CPU Load        : $CPU_LOAD
-       Last Boot       : $LAST_BOOT
-       LVM use         : $LVM_STATUS
-       Connections TCP : $TCP established
-       Users logged    : $USER_LOG
-       Network         : $IP_ADDR ($MAC_ADDR)
-       Sudo            : $SUDO_LOG commands used
-       ------------------------------------------------"
+echo "
+------------------------------------------------
+Architecture    : $ARCH
+Physical CPUs   : $PCPU
+Virtual CPUs    : $VCPU
+Memory Usage    : $RAM_USED/$RAM_TOTAL ($RAM_PERC %)
+Disk Usage      : $DISK_USED/$DISK_TOTAL ($DISK_PERC)
+CPU Load        : $CPU_LOAD
+Last Boot       : $LAST_BOOT
+LVM use         : $LVM_STATUS
+Connections TCP : $TCP established
+Users logged    : $USER_LOG
+Network         : $IP_ADDR ($MAC_ADDR)
+Sudo            : $SUDO_LOG commands used
+------------------------------------------------"

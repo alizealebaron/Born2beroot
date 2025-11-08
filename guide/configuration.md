@@ -243,7 +243,13 @@ Je me suis aussi aidée des commandes suivantes pour formater les retours des fo
 - `cut`
 - `cat`🐈
 
-Je vous laisse vous renseigner sur leur fonctionnement ou regarder dans les [commandes utiles](/Born2beroot/guide/commandes_utiles.md)
+Je vous laisse vous renseigner sur leur fonctionnement ou regarder dans les [commandes utiles](/Born2beroot/guide/commandes_utiles.md).
+
+Vous trouverez mon fichier monitoring.sh [ici](/Born2beroot/code/monitoring.sh).
+
+Étant donné que j'ai dans un premier temps fait mon script .sh sur mon ordinateur avant de le passer sur la VM, voici la commande que j'ai utilisé pour le transférer.
+
+
 
 
 ## Sources
@@ -261,3 +267,5 @@ Je vous laisse vous renseigner sur leur fonctionnement ou regarder dans les [com
 - [it-connect.fr/forcer-changement-mdp](https://www.it-connect.fr/linux-forcer-le-changement-de-mot-de-passe-des-comptes/) [Consulté le 07/11/2025]
 - [ionos.fr/cpu-vs-vcpu](https://www.ionos.fr/digitalguide/serveur/know-how/cpu-vs-vcpu/#:~:text=Dans%20la%20comparaison%20CPU%20vs,de%20performances%20et%20d'applications.) [Consulté le 08/11/2025]
 - [kinsoft.id/display-vcpu](https://kinsoft.id/blog/general-1/post/how-to-display-the-number-of-processors-vcpu-on-linux-vps-13) [Consulté le 08/11/2025]
+- [it-connect.fr/transferer-un-fichier-ssh](https://www.it-connect.fr/chapitres/transfert-de-fichier-via-ssh/) [Consulté le 08/11/2025]
+- [hostinger.com/awk](https://www.hostinger.com/tutorials/awk-command?utm_campaign=Generic-Tutorials-DSA-t3|NT:Se|Lang:EN|LO:FR&utm_medium=ppc&gad_source=1&gad_campaignid=22523766166&gbraid=0AAAAADMy-haZlQ9OVAYiF2qgn8zlcVN-R&gclid=CjwKCAiA8bvIBhBJEiwAu5ayrGagT7Arr2sdeuC6XdziG4xFEBTDb2YpC2ObPUnzFCJyIiCczeK9LBoCiMcQAvD_BwE) [Consulté le 08/11/2025]
