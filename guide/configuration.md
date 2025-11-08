@@ -227,7 +227,24 @@ sudo passwd <login/root>
 
 ## Script & Monitoring
 
-(To be continued)...
+Pour le script monitoring, je me suis principalement aidée des commandes suivantes. Pour chacune d'entre elle, vous pouvez apprendre leur fonctionnement en faisant `commande --help`. 
+
+- `uname` : Permet d'avoir les informations de notre architecture
+- `free` : Information sur la mémoire (RAM)
+- `df` : Affiche les informations du disque dur
+- `who` : Permet d'afficher les informations sur les utilisateurs
+- `hostname` : Permet de récupérer l'adresse IP (et l'hostname aussi)
+- `ip addr` : Affiche l'adresse MAC (ainsi que d'autres informations)
+
+Je me suis aussi aidée des commandes suivantes pour formater les retours des fonctions selon ce dont j'avais besoin :
+
+- `grep`
+- `tr`
+- `cut`
+- `cat`🐈
+
+Je vous laisse vous renseigner sur leur fonctionnement ou regarder dans les [commandes utiles](/Born2beroot/guide/commandes_utiles.md)
+
 
 ## Sources
 
@@ -242,3 +259,5 @@ sudo passwd <login/root>
 - [it-connect.fr/ssh](https://www.it-connect.fr/chapitres/installation-dun-serveur-ssh-et-premiere-connexion/) [Consulté le 07/11/2025]
 - [hostinger.com/secure-password-policy](https://www.hostinger.com/tutorials/how-to-change-password-in-linux?utm_campaign=Generic-Tutorials-DSA-t3|NT:Se|Lang:EN|LO:FR&utm_medium=ppc&gad_source=1&gad_campaignid=22523766166&gbraid=0AAAAADMy-hZGSzJRPF2GG55SIMAhMD4Gi&gclid=CjwKCAiAzrbIBhA3EiwAUBaUdRIJBq1cTqKE1XlZUb8cwYWKIS8cxDoUMDKDb2h5jOkHkd-HfrooqhoCqfsQAvD_BwE#Set_up_a_secure_password_policy) [Consulté le 07/11/2025]
 - [it-connect.fr/forcer-changement-mdp](https://www.it-connect.fr/linux-forcer-le-changement-de-mot-de-passe-des-comptes/) [Consulté le 07/11/2025]
+- [ionos.fr/cpu-vs-vcpu](https://www.ionos.fr/digitalguide/serveur/know-how/cpu-vs-vcpu/#:~:text=Dans%20la%20comparaison%20CPU%20vs,de%20performances%20et%20d'applications.) [Consulté le 08/11/2025]
+- [kinsoft.id/display-vcpu](https://kinsoft.id/blog/general-1/post/how-to-display-the-number-of-processors-vcpu-on-linux-vps-13) [Consulté le 08/11/2025]
