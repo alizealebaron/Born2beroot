@@ -41,10 +41,14 @@ L'installation commençera par vous demander la façon dont vous souhaitez l'ins
 > [!TIP]  
 > Par défaut, je dirais d'utiliser l'anglais, notamment car beaucoup de ressources que vous trouverez pendant vos recherches seront en anglais. Mais rien ne vous empêche de choisir une autre langue !
 2. Choississez le pays et la disposition de clavier qui vous conviennent.
-3. Pour ce qui est de l'hostname il vous faudra mettre `login42` (conformément à ce qui est demandé).
+3. Pour ce qui est de l'hostname il vous faudra mettre `votre_login42` (conformément à ce qui est demandé).
 <p align="center">
   <img width="600" height="400" src="/image/installation_03.png">
 </p>
+
+> [!WARNING]  
+> Remplacez le <votre_login> par votre login 42, sinon cela ne correspondra pas au sujet.
+
 4. Pour le nom de domaine, inutile d'en ajouter un, vous pouvez passer cette étape.
 5. Choississez un mot de passe fort (selon les critères donnés dans le sujet).
 6. Pour le nom d'utilisateur, mettez votre login. (Pour moi : `alebaron`).
