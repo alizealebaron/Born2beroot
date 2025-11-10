@@ -26,7 +26,7 @@ SUDO_LOG=$(grep -a COMMAND /var/log/sudo/sudo.log | wc -l)
 LVM_STATUS=$(if [ $(lsblk | grep lvm | wc -l) -eq 0 ]; then echo Nop; else echo Yep; fi)
 
 # Commandes d'envoi sur tous les terminaux de tous les utilisateurs
-echo "
+wall "
 ------------------------------------------------
 Architecture    : $ARCH
 Physical CPUs   : $PCPU

@@ -247,10 +247,23 @@ Je vous laisse vous renseigner sur leur fonctionnement ou regarder dans les [com
 
 Vous trouverez mon fichier monitoring.sh [ici](/Born2beroot/code/monitoring.sh).
 
-Étant donné que j'ai dans un premier temps fait mon script .sh sur mon ordinateur avant de le passer sur la VM, voici la commande que j'ai utilisé pour le transférer.
+> [!WARNING]  
+> Pensez à donner les bons droits au fichier monitoring.sh avec `chmod 755 monitoring.sh`
 
+Pour automatisé la diffusion du message toutes les 10 minutes, nous allons utiliser le service [cron](https://doc.ubuntu-fr.org/cron).
 
+```bash
+systemctl enable cron
+```
 
+Vous n'avez qu'à rajouter la lgine suivante :
+```
+*/ * * * * bash monitoring.sh
+```
+
+Et le message devrait s'envoyer désormais toutes les 10 minutes sur tous les terminaux des utilisateurs (grâce à la commande wall).
+
+Avec cela, vous aurez terminé l'installation et la configuration de votre machine (sans les bonus). Félicitations !
 
 ## Sources
 
@@ -269,3 +282,5 @@ Vous trouverez mon fichier monitoring.sh [ici](/Born2beroot/code/monitoring.sh).
 - [kinsoft.id/display-vcpu](https://kinsoft.id/blog/general-1/post/how-to-display-the-number-of-processors-vcpu-on-linux-vps-13) [Consulté le 08/11/2025]
 - [it-connect.fr/transferer-un-fichier-ssh](https://www.it-connect.fr/chapitres/transfert-de-fichier-via-ssh/) [Consulté le 08/11/2025]
 - [hostinger.com/awk](https://www.hostinger.com/tutorials/awk-command?utm_campaign=Generic-Tutorials-DSA-t3|NT:Se|Lang:EN|LO:FR&utm_medium=ppc&gad_source=1&gad_campaignid=22523766166&gbraid=0AAAAADMy-haZlQ9OVAYiF2qgn8zlcVN-R&gclid=CjwKCAiA8bvIBhBJEiwAu5ayrGagT7Arr2sdeuC6XdziG4xFEBTDb2YpC2ObPUnzFCJyIiCczeK9LBoCiMcQAvD_BwE) [Consulté le 08/11/2025]
+- [doc.ubuntu-fr.org](https://doc.ubuntu-fr.org/cron) [Consulté le 08/11/2025]
+- [it-connect.fr/wall](https://www.it-connect.fr/linux-afficher-un-message-a-tous-les-users-avec-wall/) [Consulté le 10/11/2025]
