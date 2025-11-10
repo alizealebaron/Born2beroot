@@ -6,6 +6,12 @@
 ls /usr/bin/*session
 ```
 
+## Check Apparmor
+
+```bash
+sudo systemctl status apparmor
+```
+
 ## Check UFW
 
 ```bash
