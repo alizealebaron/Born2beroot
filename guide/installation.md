@@ -50,7 +50,7 @@ L'installation commençera par vous demander la façon dont vous souhaitez l'ins
 6. Pour le nom d'utilisateur, mettez votre login. (Pour moi : `alebaron`).
 7. Choississez de nouveau un mot de passe, il ne doit pas contenir votre login !
 
-## Partionner les disques (Bonus)
+## Partionner les disques
 
 > [!TIP]  
 > Cette partie-là est demandée pour les bonus. Si vous hésitez encore à les faire je recommande tout de même de la réaliser. Sinon, si vous changez d'avis en cours de route, vous risquez de devoir tout refaire pour avoir les bonnes partitions. 
@@ -77,7 +77,7 @@ Puisque nous cherchons à avoir un partionnage de disque précis (en tout cas co
   <img width="600" height="400" src="/image/installation_05.png">
 </p>
 
-## Crypter les données d'une partition (Bonus)
+## Crypter les données d'une partition
 
 Dans cette partie nous allons nous occuper d'encrypter uniquement la partition qui nous intéresse (la deuxième).
 
@@ -91,7 +91,7 @@ Dans cette partie nous allons nous occuper d'encrypter uniquement la partition q
 4. Terminez la manipulation en cliquant sur `Done` → `Finish` → `Yes`
 5. Après un (long) temps d'attente, choississez un mot de passe (selon les critères du sujet) et notez celui-ci quelque part.
 
-## Configurer le gestionnaire de volumes logiques (Bonus)
+## Configurer le gestionnaire de volumes logiques
 
 > [!NOTE]  
 > Si vous ne savez pas ce qu'est un LVM (Logical Volume Manager), je vous invite à consulter le site suivant : [doc.ubuntu.org](https://doc.ubuntu-fr.org/lvm).
