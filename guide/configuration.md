@@ -258,7 +258,7 @@ systemctl enable cron
 
 Vous n'avez qu'à rajouter la lgine suivante :
 ```
-*/ * * * * bash monitoring.sh
+*/10 * * * * bash monitoring.sh
 ```
 
 Et le message devrait s'envoyer désormais toutes les 10 minutes sur tous les terminaux des utilisateurs (grâce à la commande wall).
