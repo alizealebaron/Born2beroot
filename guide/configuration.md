@@ -245,7 +245,7 @@ Je me suis aussi aidée des commandes suivantes pour formater les retours des fo
 
 Je vous laisse vous renseigner sur leur fonctionnement ou regarder dans les [commandes utiles](commandes_utiles.md).
 
-Vous trouverez mon fichier monitoring.sh [ici](/../code/monitoring.sh).
+Vous trouverez mon fichier monitoring.sh [ici](../code/monitoring.sh).
 
 > [!WARNING]  
 > Pensez à donner les bons droits au fichier monitoring.sh avec `chmod 755 monitoring.sh`
