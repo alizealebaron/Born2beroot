@@ -117,7 +117,7 @@ Créer tous les volumes dont vous avez besoin :
   <img width="600" height="400" src="/image/installation_07.png">
 </p>
 
-Vous pouvez revérifier les informations dans le menu `LVM configuration` en caas d'erreur, vous pouvez toujours les supprimer et réitéré le processus.
+Vous pouvez revérifier les informations dans le menu `LVM configuration` en cas d'erreur, vous pouvez toujours les supprimer et réitéré le processus. Cliquez ainsi sur `finish` pour passer à l'étape suivante.
 
 Vous n'aurez qu'à définir les systèmes de fichiers et les points de montage pour chacun des volumes logique.
 
