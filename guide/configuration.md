@@ -256,7 +256,7 @@ Pour automatisé la diffusion du message toutes les 10 minutes, nous allons util
 systemctl enable cron
 ```
 
-Vous n'avez qu'à rajouter la lgine suivante :
+Vous n'avez qu'à rajouter la ligne suivante :
 ```
 */10 * * * * bash monitoring.sh
 ```
