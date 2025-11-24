@@ -2,7 +2,7 @@
 
 # Déclarations des constantes
 ARCH=$(uname -a)
-PCPU=$(lscpu | grep "^CPU(s):" | grep -o '[0-9]\+')
+PCPU=$(grep 'physical id' /proc/cpuinfo | uniq | wc -l)
 VCPU=$(cat /proc/cpuinfo | grep processor | wc -l)
 
 RAM_USED=$(free -h | awk '/Mem:/ {print $3}')
