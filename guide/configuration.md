@@ -263,6 +263,9 @@ Vous n'avez qu'à rajouter la ligne suivante :
 
 Et le message devrait s'envoyer désormais toutes les 10 minutes sur tous les terminaux des utilisateurs (grâce à la commande wall).
 
+> [!WARNING]  
+> La commande wall ne fonctionne que sur les utilisateurs connectés localement. C'est à dire que cela ne **fonctionnera pas sur les utilisateurs connectés via le ssh**.
+
 Avec cela, vous aurez terminé l'installation et la configuration de votre machine (sans les bonus). Félicitations !
 
 ## Sources
